@@ -4,7 +4,7 @@ import Food from './Food.jsx'
 import Card from './Card.jsx'
 import Button from './button.jsx'
 import Student from './Student.jsx'
-
+import UserGreeting from './UserGreeting.jsx'
 
 //Props = read-only properties that are shared between components. 
 //A parent component can send data to a child comp <Component key=value>
@@ -14,6 +14,10 @@ import Student from './Student.jsx'
 
 //defaultProps = default values for props in case they are not passed from the parent component 
 //name: "Guest"
+
+
+//conditional rendering = allows you to control what gets rendered in your application based on certain conditions 
+//(show, hide, or change components)
 
 function App() {
   return(
@@ -28,6 +32,7 @@ function App() {
       <Student name="Squidward" age={50} isStudent={false}></Student>
       <Student name='Sandy' age={27} isStudent={true}></Student>
       <Student></Student>
+      <UserGreeting isLoggedIn={true} userName="Emily"></UserGreeting>
     </>
   );
 }

@@ -21,7 +21,7 @@ Student.defaultProps = {
     name:'Guest',
     age: 0,
     isStudent: false,
-}
+} //default props
 
 
 export default Student
