@@ -5,6 +5,7 @@ import Card from './Card.jsx'
 import Button from './button.jsx'
 import Student from './Student.jsx'
 import UserGreeting from './UserGreeting.jsx'
+import List from './List.jsx'
 
 //Props = read-only properties that are shared between components. 
 //A parent component can send data to a child comp <Component key=value>
@@ -20,6 +21,18 @@ import UserGreeting from './UserGreeting.jsx'
 //(show, hide, or change components)
 
 function App() {
+  const fruits = [{id: 1, name: 'apple', calories: 95},
+    {id: 2, name: 'orange', calories: 45},
+    {id: 3, name: 'banana', calories: 105},
+    {id: 4, name: 'coconut', calories: 159},
+    {id: 5,name: 'pineapple', calories: 37}]
+
+    const vege = [{id: 6, name: 'potato', calories: 110},
+      {id: 7, name: 'celery', calories: 15},
+      {id: 8, name: 'carrots', calories: 25},
+      {id: 9, name: 'corn', calories: 63},
+      {id: 10,name: 'brocoli', calories: 50}]
+
   return(
     <>
       <Header></Header> 
@@ -33,6 +46,8 @@ function App() {
       <Student name='Sandy' age={27} isStudent={true}></Student>
       <Student></Student>
       <UserGreeting isLoggedIn={true} userName="Emily"></UserGreeting>
+      {fruits.length>0 ?<List items = {fruits} category='Fruits'></List> : null}
+      {vege.length>0 ?<List items = {vege} category='Vegetables'></List> : null}
     </>
   );
 }
