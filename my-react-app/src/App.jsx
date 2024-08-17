@@ -6,7 +6,8 @@ import Button from './button.jsx'
 import Student from './Student.jsx'
 import UserGreeting from './UserGreeting.jsx'
 import List from './List.jsx'
-
+import ButtonTwo from './ButtonTwo.jsx'
+import ProfilePic from './ProfilePic.jsx'
 //Props = read-only properties that are shared between components. 
 //A parent component can send data to a child comp <Component key=value>
 
@@ -19,6 +20,9 @@ import List from './List.jsx'
 
 //conditional rendering = allows you to control what gets rendered in your application based on certain conditions 
 //(show, hide, or change components)
+
+//click event= an interaction when a user clicks on a specific element. We can respond to 
+//clicks by passing a callback to the onClick event handler.
 
 function App() {
   const fruits = [{id: 1, name: 'apple', calories: 95},
@@ -48,6 +52,8 @@ function App() {
       <UserGreeting isLoggedIn={true} userName="Emily"></UserGreeting>
       {fruits.length>0 ?<List items = {fruits} category='Fruits'></List> : null}
       {vege.length>0 ?<List items = {vege} category='Vegetables'></List> : null}
+      <ButtonTwo></ButtonTwo>
+      <ProfilePic></ProfilePic>
     </>
   );
 }
